@@ -4,15 +4,13 @@
 const sum = (arr) => {
     //guard clause in case that the array is empty; or base case
     if (arr.length === 0) {
-        return 0
+        return 0;
     }
 
     // recursive case - sum the first element and the sum of the rest of the array
     return arr[0] + sum(arr.slice(1));
+};
 
-}
-
-console.log(sum([1, 2, 3, 5, 6]))
 
 
 // Reverse string using recursive approach
