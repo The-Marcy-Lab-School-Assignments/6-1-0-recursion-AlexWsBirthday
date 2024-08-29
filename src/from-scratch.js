@@ -95,13 +95,13 @@ console.log(`fibrec: ${fibRec(10)}`)
 // Return the index of target in arr, or -1 if not found using recursion 
 //the goal here is to cut the array down into smaller and smaller pieces until we find the target we are looking for.
 const binarySearch = (arr, target, start = 0, end = arr.length - 1) => {
-    //calculate the middle index using a math function
-    const middle = Math.floor((start + end) / 2)
-
     //base case, meaning that the array has been fully minimized and we still haven't found the target.
     if (start > end || start > middle) {
         return -1
     }
+
+    //calculate the middle index using a math function
+    const middle = Math.floor((start + end) / 2)
 
     //using the middle index number we caluclated, compare the element of the middle index in the given array to the value of the given target.
     if (arr[middle] === target) {
